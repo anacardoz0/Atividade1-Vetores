@@ -1,22 +1,27 @@
 #include <stdio.h>
 
-//Altere o algoritmo anterior considerando que n„o se conhece quantos alunos esta turma tem (menos que 50). O n˙mero de aluno ser· informado pelo usu·rio.
+//Altere o algoritmo anterior considerando que n√£o se conhece quantos alunos esta turma tem (menos que 50). O n√∫mero de aluno ser√° informado pelo usu√°rio.
 
 int main (){
 	
-	float notas[30];
-	int i, quantidade;
+	int quantidadeAlunos;
 	
 	printf("Digite a quantidade de aluno: ");
-	scanf("%d", &quantidade);
+	scanf("%d", &quantidadeAlunos);
+	
+	float notas[quantidadeAlunos];
+	int i;
 
-	for (i=1; i<=quantidade; i++){
+	for (i=1; i<=quantidadeAlunos; i++){
 		printf("Digite a %d nota: ", i);
 		scanf("%f", &notas[i]);
 	}
-	
-	for (i=1; i<=quantidade; i++){
-		printf("Nota %d: %f\n", i, notas[i]);
+
+   printf("\n\n");
+
+	for (i=1; i<=quantidadeAlunos; i++){
+		printf("Nota %d: ",i);
+		printf("%.1f\t", notas[i]);
 	}
 	
 	return 0;
