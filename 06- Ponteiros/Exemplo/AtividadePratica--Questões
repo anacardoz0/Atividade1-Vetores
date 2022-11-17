@@ -19,8 +19,7 @@ int main() {
 	
 	return 0;
 }
-
-
+______________________________________________________________________________________________________________
 /*                       ----Questão 02----
 Crie um programa em C que receba três números do usuário depois crie uma função 
 que receba os 3 números como parâmetros: A, B e C. Ordene de tal forma que, ao final 
@@ -29,11 +28,25 @@ Utilize ponteiro para solucionar o problema.
 */
 
 int main(){
+	
+int valor[3];
+int *pValor;
+int i;
+
+for (i = 0; i < 3; i++){
+	printf("Digite o valor: ");
+	scanf("%d", &valor[i]);
+}
+
+	printf("\n\n");
+
+for (i = 0; i < 3; i++){
+	pValor = &valor[i];
+	printf("Valor: %d\n", *pValor);
 
 return 0;
 }
-
-
+______________________________________________________________________________________________________________
 /*                       ----Questão 03----
  Desenvolva um programa em C que contenha um vetor contendo 5 elementos inteiros. 
 Utilizando apenas notação de ponteiros, leia esse vetor do teclado e imprima o endereço 
@@ -44,8 +57,7 @@ int main(){
 
 return 0;
 }
-
-
+______________________________________________________________________________________________________________
 /*                       ----Questão 04----
 Crie uma função que aceite como parâmetro um vetor de inteiros com N valores, e 
 determina o maior elemento do vetor e o número de vezes que este elemento ocorreu no 
@@ -58,8 +70,7 @@ int main(){
 
 return 0;
 }
-
-
+______________________________________________________________________________________________________________
 /*                       ----Questão 05----
 Desenvolva um programa que declare um vetor de inteiros e um ponteiro para inteiros. 
 Associe o ponteiro ao vetor. Agora, some mais um (+1) a cada posição do vetor usando o 
