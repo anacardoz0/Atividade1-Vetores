@@ -213,7 +213,7 @@ int main(){
     float media;
     
     for( i = 0; i < 100; i++){
-        printf("Digite a idade %:  ");
+        printf("Digite a idade (%d):  ");
         scanf("%d", &idade[i]);
     }
     
@@ -248,6 +248,37 @@ para ler um número indeterminado de informações (máximo de 50) contendo a ma
 funcional do empregado e o número de meses de trabalho deste empregado. Mostre os três
 empregados mais recentes. Não existem dois empregados admitidos no mesmo mês e a
 matrícula igual a zero ‘0’ encerra a leitura.*/
+
+int main(){
+	
+	int i, recentes;
+	int num;
+	int matricula[num], meses[num];
+	
+	printf("Informe a quantidade de funcionarios desejada: ", i+1);
+    scanf("%d", &num);
+    printf("__________________________________");
+
+		for (i =0; i < num; i++){
+		printf ("\nInforme a matricula do funcionario %d: ");
+		scanf  ("%d", &matricula[i]);
+		printf ("Informe os meses trabalhados pelo funcionario [%d]: ",i+1);
+		scanf  ("%d", &meses[i]);
+		if (meses[i] < meses[i]){
+			recentes = matricula[i];
+		}
+	}
+	
+	for (i =0; i < num; i++){
+		if (meses[i] < meses[i]){
+			recentes = matricula[i];
+		}
+	}
+	printf("\n\n");
+	printf ("O %d eh o funcionario mais novo", recentes);
+	return 0;
+}
+
 
 /*_____________________________________end__________________________________________*/
 
