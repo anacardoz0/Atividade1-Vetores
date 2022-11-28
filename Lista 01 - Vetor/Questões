@@ -288,3 +288,57 @@ Elabore um algoritmo que leia um conjunto de valores inteiros correspondentes a 
 notas, variando de 0 a 10, dos alunos de uma turma (vários alunos). Calcule a frequência de
 cada nota e apresente uma tabela contendo os valores das notas e suas respectivas frequências.*/
 
+int main(){
+	
+	int num, rep;
+	int nota[num], a, b = 1;
+	int frequencia;
+	
+printf("Informe a quantidade de notas que deseja armazenar: ");
+scanf("%d",num);
+
+if(num > 80){
+    printf("Max de nota eh 80!");
+    return;
+}
+
+do{
+        for(a = 0; a < num ; a++){
+    printf("Informe a nota do aluno [%i]: ", a);
+    scanf("%d", &nota[a]);
+
+       
+    if(nota[a] < 0 || nota[a] > 10){
+            printf("Nota informada eh INVALIDA!\n");
+    }
+	else{
+            printf("Nota informada eh VALIDA!\n");
+        }
+
+    }
+
+}while (nota[a] < 0 && nota[a] > 10);
+
+       
+    printf("\n------NOTAS DOS ALUNOS------\n");
+        for(a = 0; a < num ; a++){
+            printf("Nota[%i]: %d\n",nota[a]);
+        }
+
+        
+    printf("Numeros repetidos no vetor: \n");
+        for(a = 0; a < num; a++){
+        rep = 0;
+
+        for(b = a + 1; b < num ; b++){
+        if(nota[a]== nota[b]){
+    rep = 1;
+                }
+        if(rep = a){
+    printf("%d\n",nota[a]);
+            }
+        }
+    }
+    return 0;
+}
+
