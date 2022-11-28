@@ -121,22 +121,22 @@ escrever, em uma tela limpa, quantas vezes eles aparecem e quais as posições e
 armazenados no vetor.*/
 
 int main(){
-    int elements[3];
+    int elements[80];
     int count, num = 0;
     int a, b;
 
-    for(count = 0; count <= 3; count++){
+    for(count = 0; count <= 80; count++){
         printf("\nDigite um numero: "); 
         fflush(stdin); 
         scanf("%d", &elements[count]);
        
     }
 
-    for(a = 0; a <= 3; a++){
+    for(a = 0; a <= 80; a++){
         printf("%d ", elements[a]);
         printf("\n-------\n");
             
-    for(b= 0; b <= 5; b++){
+    for(b= 0; b <= 80; b++){
             if(elements[a] == elements[b] && b != a){
                 printf("\nO numero %d repetiu na posicao %d", elements[a], b);
                 }
@@ -206,6 +206,38 @@ for (i=0; i<100; i++){
 Faça um algoritmo que leia a idade de até 100 pessoas e apresente a média entre todas, além
 de identificar a mais velha e a posição em que ela se encontra no vetor. A idade mais velha
 pode aparecer em mais de uma posição.*/
+
+int main(){
+    int idade[100], soma = 0, i;
+    int maisvelha = 0;
+    float media;
+    
+    for( i = 0; i < 100; i++){
+        printf("Digite a idade %:  ");
+        scanf("%d", &idade[i]);
+    }
+    
+    for( i = 0; i < 100; i++){
+        if (idade[i]>= maisvelha)
+		{
+            maisvelha=idade[i];
+        }
+        soma = soma + idade[i];
+    }
+    
+    media= soma/idade[i];
+    printf("A media eh: %.0f\n", media);
+  
+    for( i = 0; i < 100; i++)
+    {
+        if(idade[i] == maisvelha){
+            printf("A idade mais velha e: %d \n", maisvelha);
+            printf("Posicao %d\n", i);
+        }
+    }
+    return 0;
+}
+ 
 
 /*_____________________________________end__________________________________________*/
 
