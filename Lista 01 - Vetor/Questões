@@ -120,6 +120,32 @@ um número e verifique se existem elementos no vetor iguais ao número lido. Se 
 escrever, em uma tela limpa, quantas vezes eles aparecem e quais as posições em que eles estão
 armazenados no vetor.*/
 
+int main(){
+    int elements[3];
+    int count, num = 0;
+    int a, b;
+
+    for(count = 0; count <= 3; count++){
+        printf("\nDigite um numero: "); 
+        fflush(stdin); 
+        scanf("%d", &elements[count]);
+       
+    }
+
+    for(a = 0; a <= 3; a++){
+        printf("%d ", elements[a]);
+        printf("\n-------\n");
+            
+    for(b= 0; b <= 5; b++){
+            if(elements[a] == elements[b] && b != a){
+                printf("\nO numero %d repetiu na posicao %d", elements[a], b);
+                }
+                
+             }
+        
+        }
+return 0;
+        }
 
 /*_____________________________________end__________________________________________*/
 
