@@ -150,7 +150,7 @@ return 0;
 
 /*_______________________________________________________________________________________________________________*/
 
-/*                 ----------Questão 03----------
+/*                 ----------Questão 04----------
 Crie um programa em C que leia os elementos de uma matriz inteira 6 x 6 e 
 imprima todos os elementos, exceto os elementos da diagonal principal.
 */
