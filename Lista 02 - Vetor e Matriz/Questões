@@ -150,3 +150,34 @@ return 0;
 
 /*_______________________________________________________________________________________________________________*/
 
+/*                 ----------Questão 03----------
+Crie um programa em C que leia os elementos de uma matriz inteira 6 x 6 e 
+imprima todos os elementos, exceto os elementos da diagonal principal.
+*/
+
+#include <stdio.h>
+
+int main (){
+	
+    int elements[6][6], a, b;
+    
+    for(a = 0; a < 6; a++){
+    	
+    for (b = 0; b < 6; b++){
+           printf("\nInforme dois numeros a serem armazenados em |%d| |%d|: ", a, b);
+           scanf("%d", &elements[a][b]);
+        }
+        
+    }
+    for(a = 0; a < 6; a++){
+    	
+    for(b = 0; b < 6; b++){
+            printf("%d\n", &elements[a][b]);
+        }
+        
+}
+return 0;
+}
+
+/*_______________________________________________________________________________________________________________*/
+
