@@ -1,4 +1,4 @@
-/* ----------Questão 01----------
+/*             ----------Questão 01----------
 Escreva um programa em C que lê matricula e as notas de no máximo 100 
 alunos. O programa deve ler e armazenar uma nova matricula e uma nova nota 
 enquanto o usuário desejar. Após o armazenamento permita ao usuário 
@@ -52,6 +52,63 @@ int main(){
         }
     }
    return 0; 
+}
+
+/*_______________________________________________________________________________________________________________*/
+
+/*                 ----------Questão 02----------
+Crie um programa em C que leia 10 números inteiros e armazene em um vetor 
+v. Declare dois novos vetores v1 e v2. Copie os valores ímpares de v para v1, 
+e os valores pares de v para v2. Note que cada um dos vetores v1 e v2 podem 
+ter no máximo 10 elementos, mas nem todas as posições do vetor são 
+utilizadas. No final escreva os elementos que foram armazenados em v1 e v2.
+*/
+
+#include<stdio.h>
+
+int main(){
+	
+	int num;
+	int v[num], v1[num], v2[num], a, c, impar[num], par[num];
+	
+    printf("Quantos vetores deseja adicionar (MAX 10)? ");
+    scanf("%d", &num);
+    printf ("\n\n");
+    
+    for(a = 0; a < num; a++)
+    {
+        printf("Digite um numero(inteiro) [%d]: ", a);
+        scanf("%d", &v[a]);
+
+        c = v[a] %2;
+        
+		if(c == 0)
+        {
+            v1[a] = v[a];
+            par[a] = 1;
+        } else (c > 0); {
+           v2[a] = v[a];
+            impar[a]=1;
+        }  
+    }
+
+    for(a = 0; a < num; a++)
+    {
+      if (impar[a] == 1)
+      {
+       printf("\n\n");
+       printf("O numero impar %d esta na posicao %d", v2[a], a);
+      }  
+    }
+    
+    for(a = 0; a < num; a++)
+    {
+        if (par[a] == 1)
+      {
+        printf("O numero par %d esta na posicao %d", v1[a], a);
+      }
+    }
+    return 0;
 }
 
 /*_______________________________________________________________________________________________________________*/
