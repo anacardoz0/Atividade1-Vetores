@@ -243,7 +243,22 @@ linha e da coluna de cada elemento. Ao final exiba a matriz em tela.
 #include <stdio.h>
 
 int main (){
+	
+    int a[4][4], i, j;
 
+   for(i = 0; i < 5; i++)
+    {
+    for (j = 0; j < 5; j++){
+           a[i][j] = i*j;
+        }  
+    }
+
+    for( i = 0; i < 5; i++){
+
+    for(j = 0; j < 5; j++){
+         printf("Matriz 'A' [%d][%d]: %d\n", i, j, a[i][j]);
+        }
+}
 return 0;	
 }	
 
