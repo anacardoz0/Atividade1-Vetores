@@ -1,1 +1,60 @@
+/* ----------Questão 01----------
+Escreva um programa em C que lê matricula e as notas de no máximo 100 
+alunos. O programa deve ler e armazenar uma nova matricula e uma nova nota 
+enquanto o usuário desejar. Após o armazenamento permita ao usuário 
+consultar a nota de um aluno digitando sua matricula, o programa deve permitir 
+no máximo 10 consultas para um mesmo ciclo de execução do programa.
+*/
+
 #include<stdio.h>
+
+int main(){
+	
+	int num;
+	int notas, matrícula, a, consultar, pesq;
+	char resposta[3];
+	
+	 /*int i,nota[100],continua,count=0,pesquisa;
+  char matrícula[100];*/
+
+    printf("Quantos alunos serao cadastrados? "); 
+    fflush(stdin);
+    scanf("%d", &num);
+
+    for(a = 0; a < num; a++){
+    fflush(stdin);
+    printf("Digite a matricula do aluno %d:", i+1);
+    scanf("%d", &matricula);
+    fflush(stdin);
+    printf("Digite a nota do aluno %d:", i+1);
+    scanf("%d", &nota);
+    
+    }
+
+    for (a = 0; a < num; a++){
+    printf("Deseja consultar alguma nota? ");
+    scanf("%c", &resposta[i]);
+    
+    if(resposta == 'Sim' || resposta == 'sim' || resposta == 'SIM' || resposta == 'S' || resposta == 's'){
+            printf("Digite a matricula do aluno: ");
+            fflush(stdin);
+            scanf("%d", &consultar);
+
+    for(i = 0; i < num; i++){
+                if (pes == matrícula){
+    printf("Matricula----> %d",matricula);
+    printf("Nota----> %d",nota);
+    
+            }
+        }
+    }
+        else {
+        break;
+        }
+    }
+   return 0; 
+}
+
+/*_______________________________________________________________________________________________________________*/
+
+
