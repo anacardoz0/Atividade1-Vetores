@@ -11,8 +11,8 @@ no máximo 10 consultas para um mesmo ciclo de execução do programa.
 int main(){
 	
 	int num;
-	int notas, matrícula, a, consultar, pesq;
-	char resposta[3];
+	float notas[num];
+	int resposta, matricula[num], a, pesq;
 
     printf("Quantos alunos serao cadastrados? "); 
     fflush(stdin);
@@ -20,32 +20,34 @@ int main(){
 
     for(a = 0; a < num; a++){
     fflush(stdin);
-    printf("Digite a matricula do aluno %d:", i+1);
-    scanf("%d", &matricula);
+    printf("\nDigite a matricula do aluno [%d]: ", a+1);
+    scanf("%d", &matricula[a]);
     fflush(stdin);
-    printf("Digite a nota do aluno %d:", i+1);
-    scanf("%d", &nota);
+    printf("Digite a nota do aluno %d: ", a+1);
+    scanf("%f", &notas);
+    
+    printf("\n\n");
     
     }
 
     for (a = 0; a < num; a++){
-    printf("Deseja consultar alguma nota? ");
-    scanf("%c", &resposta[i]);
+    printf("Deseja consultar alguma nota? (1 = sim) (2 = nao): ");
+    scanf("%d", &resposta);
     
-    if(resposta == 'Sim' || resposta == 'sim' || resposta == 'SIM' || resposta == 'S' || resposta == 's'){
+    if(resposta == 1){
             printf("Digite a matricula do aluno: ");
             fflush(stdin);
-            scanf("%d", &consultar);
+            scanf("%d", &pesq);
 
-    for(i = 0; i < num; i++){
-                if (pes == matrícula){
-    printf("Matricula----> %d",matricula);
-    printf("Nota----> %d",nota);
+    for(a = 0; a < num; a++){
+                if (pesq == matricula){
+    printf("Matricula----> %d", matricula);
+    printf("Nota----> %.0f", notas);
     
             }
         }
     }
-        else {
+        else ( resposta == 0); {
         break;
         }
     }
