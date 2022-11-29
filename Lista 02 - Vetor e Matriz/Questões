@@ -164,7 +164,7 @@ int main (){
     for(a = 0; a < 6; a++){
     	
     for (b = 0; b < 6; b++){
-           printf("\nInforme dois numeros a serem armazenados em |%d| |%d|: ", a, b);
+           printf("\nInforme um numero a ser armazenado em |%d| |%d|: ", a, b);
            scanf("%d", &elements[a][b]);
         }
         
