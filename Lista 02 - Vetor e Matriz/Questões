@@ -13,9 +13,6 @@ int main(){
 	int num;
 	int notas, matrícula, a, consultar, pesq;
 	char resposta[3];
-	
-	 /*int i,nota[100],continua,count=0,pesquisa;
-  char matrícula[100];*/
 
     printf("Quantos alunos serao cadastrados? "); 
     fflush(stdin);
