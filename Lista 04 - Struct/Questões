@@ -1,1 +1,41 @@
+/*                   ----------Questão 01----------
+Desenvolva um programa em C utilizando registro que permita a entrada de nome,
+endereço e telefone de 3 pessoas e os imprima ao final.
+*/
+
 #include<stdio.h>
+
+typedef struct cadastro{
+	char nome[30], endereco[30], telefone[11];
+}cad;
+
+int main(){
+
+    cad usuario[3];
+    int a;
+
+    for(a = 0; a < 3; a++){
+    printf("Digite o nome: ");
+    fgets(usuario[a].nome, 30, stdin);
+
+    printf("Digite o endereco: ");
+    fgets(usuario[a].endereco, 30, stdin);
+
+        printf("Informe o telefone |com ddd|: ");
+        fgets(usuario[a].telefone, 11, stdin);
+    }
+
+    for(a = 0; a < 3; a++){
+    	
+    	print("\n********************************");
+        printf("Nome: %s", usuario[a].nome);
+        printf("Endereco: %s", usuario[a].endereco);
+        printf("Telefone: %s", usuario[a].telefone);
+        print("********************************\n");
+    }
+
+    return 0;
+}
+
+/*___________________________________________________________________________________________*/
+
