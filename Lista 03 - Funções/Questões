@@ -1,1 +1,121 @@
+/*                   ----------Questão 01----------
+Escreva uma função que receba por parâmetro dois números e retorne o maior deles
+*/
+
 #include<stdio.h>
+
+int maior (a, b){
+	
+	if (a > b){
+		return a;
+	}
+	else {
+		return b;
+	}
+
+}
+
+int main(){
+	
+	int a, b, maiornumero;
+	
+	printf("Forneca o primeiro numero: ");
+	scanf("%d", &a);
+	
+	printf("Forneca o segundo numero: ");
+	scanf("%d", &b);
+	
+	maiornumero = maior(a, b);
+	
+	printf("\nO maior numero eh %d", maior);
+	
+	return 0;
+}
+
+/*_______________________________________________________________________________________*/
+
+/*                   ----------Questão 02----------
+Faça uma função que receba um número inteiro entre 1 a 12 e imprima em tela o mês e a
+sua quantidade de dias de acordo com o número digitado pelo usuário. Exemplo:
+Entrada = 4. Saída = abril.
+*/
+
+#include<stdio.h>
+
+void meses(int num){
+	
+switch (num){
+		
+	case 1: 
+	printf("\nO numero %d corresponde ao mes de JANEIRO\n1", num);
+	break;
+	
+	case 2: 
+	printf("\nO numero %d corresponde ao mes de FEVEREIRO\n", num);
+	break;
+	
+	case 3: 
+	printf("\nO numero %d corresponde ao mes de MARCO\n", num);
+	break;	
+	
+	case 4: 
+	printf("\nO numero %d corresponde ao mes de ABRIL\n", num);
+	break;
+	
+	case 5: 
+	printf("\nO numero %d corresponde ao mes de MAIO\n", num);
+	break;
+	
+	case 6: 
+	printf("\nO numero %d corresponde ao mes de JUNHO\n", num);
+	break;
+	
+	case 7: 
+	printf("\nO numero %d corresponde ao mes de JULHO\n", num);
+	break;
+	
+	case 8: 
+	printf("\nO numero %d corresponde ao mes de AGOSTO\n", num);
+	break;
+	
+	case 9: 
+	printf("\nO numero %d corresponde ao mes de SETEMBRO\n", num);
+	break;
+	
+	case 10: 
+	printf("\nO numero %d corresponde ao mes de OUTUBRO\n", num);
+	break;
+	
+	case 11: 
+	printf("\nO numero %d corresponde ao mes de NOVEMBRO\n", num);
+	break;
+	
+	case 12: 
+	printf("\nO numero %d corresponde ao mes de DEZEMBRO\n", num);
+	break;
+	
+	default:
+    break;
+	}
+}
+
+int main(){
+	
+    int mesimp;
+
+    do{
+    printf("\nInforme um numero de 1 a 12: ");
+    scanf("%d", &mesimp);
+
+        if(mesimp < 1 || mesimp > 12){
+        printf("O numero informado INVALIDO!\n");}
+        
+    } while(mesimp < 1 || mesimp > 12);
+        
+    meses(mesimp);
+
+    return 0;
+}
+
+/*_______________________________________________________________________________________*/
+
