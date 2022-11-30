@@ -83,3 +83,140 @@ int main(){
 
 /*___________________________________________________________________________________________*/
 
+/*                   ----------Questão 03----------
+Escreva as instruções necessárias para definir um tipo de ESTRUTURA que contenha
+2 elementos, uma “STRING” de 10 caracteres e um INTEIRO:
+*/
+
+#include<stdio.h>
+#include <string.h>
+
+/*___________________________________________________________________________________________*/
+
+/*                   ----------Questão 04----------
+Defina uma estrutura em C para armazenar dados de um veículo (Marca, modelo, cor,
+quantidade de portas, motorização), crie uma função para armazenar os dados de 10
+veículos, outra para mostrar os dados armazenados, a função main() deve conter um
+pequeno menu para chamar as funções criadas.
+*/
+
+#include<stdio.h>
+#include <string.h>
+
+typedef struct veiculo{
+	char marca[10], modelo[10], cor[20], motorizacao[30];
+	int qt_porta;
+}veiculo;
+
+veiculo carro[2];
+
+void inserir_dados(){
+	
+	int i;
+	
+	for (i = 0; i < 10; i++){
+    printf("Informe a marca do veiculo |%d|: ", i+1);
+    fgets(carro[i].marca, 10, stdin); 
+    printf("Informe o modelo do veiculo |%d|: ", i+1);
+    fgets(carro[i].modelo, 10, stdin);
+    printf("Informe a cor do veiculo |%d|: ", i+1);
+    fgets(carro[i].cor, 20, stdin);
+    printf("Informe a motorizacao do veiculo |%d|: ", i+1);
+    fgets(carro[i].motorizacao, 30, stdin);
+    printf("Informe a quantidade de portas do veiculo |%d|: ", i+1);
+    scanf("%d", &carro[i].qt_porta);
+        fflush(stdin);
+    }
+	
+}
+
+void mostrar_dados(){
+	
+	int i;
+
+    for (i = 0; i < 10; i++){
+    print("\n-------------------------------------------");
+    printf("Marca do veiculo |%d|: %s",i+1, carro[i].marca);
+    printf("Modelo do veiculo |%d|: %s",i+1, carro[i].modelo);
+    printf("Cor do veiculo |%d|: %s",i+1, carro[i].cor);
+    printf("Motorizacao do veiculo |%d|: %s",i+1, carro[i].motorizacao);
+    printf("O veiculo |%d| possui %s portas",i+1, carro[i].qt_porta);
+    print("-------------------------------------------\n");
+    }
+    
+}
+
+int main(){
+	
+	int option, i;
+	
+	do{
+        printf("******* MENU DE OPCOES ******\n");
+        printf("|1| Inserir dados");
+        printf("|2| Mostrar dados\n");
+        scanf("%d", &option);
+        fflush(stdin);
+
+        switch (option)
+        {
+        case 1:
+            inserir_dados();
+            break;
+
+        case 2:
+            mostrar_dados();
+            break;
+
+        default:
+            break;
+        }
+    }while(option == 1 || option == 2);
+    
+    return 0;
+}
+
+/*___________________________________________________________________________________________*/
+
+/*                   ----------Questão 05----------
+Considerando a estrutura abaixo para representar um vetor, implemente um programa
+que calcule a soma de dois vetores, sabendo que: A + B = < (a1 + a2), (b1 + b2), (c1 + c2)
+>
+struct vetor {
+int a;
+int b;
+int c;
+};
+
+*/
+
+#include<stdio.h>
+#include <string.h>
+
+typedef struct vetor{
+	int a;
+    int b;
+    int c; 
+}vetor;
+
+int main(){
+
+    vetor v[2];
+    int a, b;
+    
+    v[0].a = 2;
+    v[0].b = 5;
+    v[0].c = 11;
+    v[1].a = 12;
+    v[1].b = 9;
+    v[1].c = 4;
+
+    a = v[0].a + v[0].b + v[0].c;
+    b = v[1].a + v[1].b+ v[1].c;
+
+    printf("Soma dos vetores eh = %d", a+b);
+
+    return 0;
+}
+
+/*___________________________________________________________________________________________*/
+
