@@ -147,3 +147,32 @@ int main(){
 
 /*_______________________________________________________________________________________*/
 
+/*                   ----------Questão 04----------
+Escreva uma função que receba por parâmetro a altura e o raio de um cilindro circular e
+retorne o volume desse cilindro. O volume de um cilindro circular é calculado por meio da
+seguinte fórmula:
+ ------> V= pi * raio2(ao quadrado) * altura <------ 
+em que pi = 3.1414592
+*/
+
+#include<stdio.h>
+
+/*_______________________________________________________________________________________*/
+
+/*                   ----------Questão 05----------
+Escreva uma função para o cálculo do volume de uma esfera
+-----> V = 4 / 3pi * r3(ao cubo) <-----
+em que pi = 3.1414592 valor do raio r deve ser passado por parâmetro.
+*/
+
+#include<stdio.h>
+
+/*_______________________________________________________________________________________*/
+
+/*                   ----------Questão 06----------
+Escreva uma função que receba o peso (quilos) e a altura (metros) de uma pessoa. Calcule
+e retorne o IMC (Índice de Massa Corporal) dessa pessoa:
+-----> IMC = peso / (h * h) <-----           h= altura
+*/
+
+#include<stdio.h>
