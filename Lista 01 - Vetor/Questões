@@ -156,9 +156,47 @@ Fazer um algoritmo/programa que leia a matricula e o salário dos funcionários 
 dados lidos e o maior e menor salário dos funcionários. O maior e menor salário deverão ser
 obtidos, cada um, por uma função. Sabe-se ainda que não existe matrícula repetida na empresa.*/
 
+int main(){
+
+int num;
+int matricula[num], a;
+float salario[num], menor = 0, maior = 35.000;
+
+printf("Quantos funcionarios deseja inserir |MAX 100|? ");
+scanf("%d", &num);
+printf("\n");
+
+ for(a = 0; a < num; a++){
+    printf("\nDigite a matricula do funcionario: ");
+    scanf("%d", &matricula[a]);
+    printf("Digite o salario do funcionario [%d]: ", matricula[a]);
+    scanf("%f", &salario[a]);
+
+    if(salario[a] > maior){
+            maior = salario[a];}
+            
+    if(salario[a] < menor){
+            menor = salario[a];}
+}
+
+    printf("\n****************************\n");
+
+    for(a = 0; a < num; a++){
+        printf("Matricula: %d\n", matricula[a]);
+        printf("Salario: %.0f\n", salario[a]);
+        printf("\n");
+    }
+
+
+    printf("Maior salario: %.0f\n", maior);
+    printf("Menor salario: %.0f", menor);
+    
+    printf("\n****************************\n");
+
+return 0;
+}
 
 /*_____________________________________end__________________________________________*/
-
 
 #include <stdio.h>
 /*                               ----Questão 07----
