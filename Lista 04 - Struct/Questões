@@ -7,11 +7,11 @@ endereço e telefone de 3 pessoas e os imprima ao final.
 
 typedef struct cadastro{
 	char nome[30], endereco[30], telefone[11];
-}cad;
+}cadastro;
 
 int main(){
 
-    cad usuario[3];
+    cadastro usuario[3];
     int a;
 
     for(a = 0; a < 3; a++){
@@ -35,6 +35,50 @@ int main(){
     }
 
     return 0;
+}
+
+/*___________________________________________________________________________________________*/
+
+/*                   ----------Questão 02----------
+Criar um registro chamado DadosAluno, que armazene o nome e idade de um aluno.
+Na função main: criar uma variável que é uma estrutura DadosAluno; ler o nome e a idade
+de um aluno e armazenar na variável criada; exibir na tela o nome do aluno e a idade do
+aluno.
+*/
+
+#include<stdio.h>
+#include <string.h>
+
+typedef struct dados_alunos{
+	char nome[50], idade [3];
+}dados_alunos;
+
+int main(){
+	
+	dados_alunos aluno; 
+	int num, a;
+	
+	printf("Quantos aluno deseja REGISTAR? ");
+	scanf("%d", &num);
+	printf("\n");
+	
+	for(a = 0; a < num; a++){
+
+    printf("Forneca o NOME do aluno: ");
+    fgets(aluno.nome, 50, stdin);
+    
+    printf("\nForneca a IDADE do aluno: ");
+    scanf("%d", &aluno.idade);
+	}
+	
+	for(a = 0; a < num; a++){
+		printf("\n-------------------------");
+        printf("Nome: %s", aluno.nome);
+        printf("Idade: %d", aluno.idade);
+        printf("-------------------------\n");
+    }
+
+	return 0;
 }
 
 /*___________________________________________________________________________________________*/
