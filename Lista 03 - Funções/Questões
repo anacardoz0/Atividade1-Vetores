@@ -220,3 +220,25 @@ e retorne o IMC (Índice de Massa Corporal) dessa pessoa:
 */
 
 #include<stdio.h>
+#include <math.h>
+
+float calcIMC(float peso, float h){
+ return peso / pow(h, 2);
+}
+
+int main(){
+	
+    float peso, h, imc;
+
+    printf("Digite o peso da pessoa |em KG|: ");
+    scanf("%f", &peso);
+    printf("\nDigite a altura da pessoa |em M|: ");
+    scanf("%f", &h);
+
+    imc = calcIMC(peso, h);
+    
+    printf("\n\n");
+    printf("O seu IMC(Indice de Massa Corporal) eh %1.f\n", imc);
+	
+	return 0;
+}
