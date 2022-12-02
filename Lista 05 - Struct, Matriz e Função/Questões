@@ -262,7 +262,18 @@ escreva um programa que utilize uma função para solicitar os dados de um eleme
 matriz e outra para listar todos os dados.
 */
 
-#include <stdio.h>
+#include<stdio.h>
+
+typedef struct enderecoP{
+	char cep[25], casa[10], estado[2], cidade[100], endereco[500]; bairro[50];
+}enderecoP;
+typedef struct restaurantes{
+	char nome[500], type_food[200];
+	float preco_medio;
+	enderecoP endp;
+}restaurantes;
+
+restaurantes rest [2][2];
 
 /*__________________________________________________________________________________*/
 
