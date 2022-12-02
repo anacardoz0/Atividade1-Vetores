@@ -85,6 +85,173 @@ e) Apresentar a média das idades de cada uma das séries.
 */
 
 #include <stdio.h>
+#include <string.h>
+
+typedef struct cadastro{
+	int matricula, serie, nascimento;
+	char nome[500], turma, sexo, aprovado, naturalidade[100];
+	float media;
+}cadastro;
+
+cadastro cadA[2];
+
+void Cadastrar(){
+
+	int i;
+    printf("------------CADASTRO------------\n");
+    
+    for(i = 0; i < 2; i++){
+    	printf("Numero da matricula: "); 
+    	scanf("%d", &cadA[i].matricula);            
+    	
+		printf("Nome: ");  
+    	scanf("%s", &cadA[i].nome);
+    	
+		printf("Série: ");
+    	scanf("%d", &cadA[i].serie);
+    	
+		printf("Turma: ");
+    	scanf("%s", &cadA[i].turma);
+    	
+		printf("Sexo |F = feminino| ou |M = masculino|: ");
+    	scanf("%s", &cadA[i].sexo);
+    	
+		printf("Media: ");
+    	scanf("%f", &cadA[i].media);
+    	
+		printf("Aprovado: ");
+    	scanf("%s", &cadA[i].aprovado);
+    	
+		printf("Ano do nascimento: ");
+    	scanf("%d", &cadA[i].nascimento);
+    	
+		printf("Naturalidade: ");
+    	scanf("%s", &cadA[i].naturalidade);
+	}
+    
+}
+
+void Amarzenar(){
+	
+	int i;
+	
+	for (i = 0; i < 2; i++){
+		
+	printf("Numero da matricula |%d|", cadA[i].matricula);
+	printf("Nome-----------> %s", cadA[i].nome);
+	printf("Série-----------> %d", cadA[i].serie);
+	printf("Turma-----------> %s", cadA[i].turma);
+	printf("Sexo-----------> %s", cadA[i].sexo);
+	printf("Media-----------> %.1f", cadA[i].media);
+	printf("Aprovado---------> %s", cadA[i].aprovado);
+	printf("Ano do nascimento-----------> %d", &cadA[i].nascimento);
+	printf("Naturalidade-----------> %s", cadA[i].naturalidade);
+}
+	
+}
+
+void Aprovados(){
+
+    float count_a = 0, count_r = 0;
+    int i;
+
+    for(i = 0; i < 2; i++){
+
+        if (cadA[i].aprovado == 's'){
+            
+            count_a++; 
+
+        }  else{
+            count_r++;
+        }
+    }
+
+    printf("Porcentagem de APROVADOS %.1f\n", (count_a / i) * 100);
+   
+}
+
+void porcemFouM(){
+
+    float count_f = 0, count_m = 0;
+    int i;
+
+    for(i = 0; i < 2; i++){
+
+        if (cadA[i].sexo == 'f' || 'F'){
+            
+            count_f++; }  
+            
+        if (cadA[i].sexo == 'm' || 'M'){
+            
+            count_m++; } 
+            
+    printf("Porcentagem de MULHERES %.1f\n", (count_f / i) * 100);
+    printf("Porcentagem de HOMENS %.1f\n", (count_m / i) * 100);
+
+    }
+
+    printf("Porcentagem de APROVADOS %.1f\n", (count_a / i) * 100);
+   
+}
+
+void Medias(){
+	
+	int i;
+	for(i = 0; i < 2; i++){
+}
+}
+
+int main(){
+
+    int option;
+
+    do{
+        printf("*********MENU*********\n");
+        printf("[1] CADASTRAR ALUNOS");
+        printf("[2] APRESETAR DADOS DOS ALUNOS");
+        printf("[3] PORCENTAGEM DE ALUNOS APROVADOS E REPROVADOS");
+        printf("[4] PORCENTAGEM DE ALUNOS DO SEXO MACULINO E FEMININO");
+        printf("[5] MEDIA DAS IDADES");
+        printf("[6] FINALIZAR");
+        printf("\n*******************\n");
+        printf("\nDigite a opcao desejada: ")
+        scanf("%d", &option);
+
+        switch (option)
+        {
+        case 1:
+            Cadastar();
+            break;
+        
+        case 2:
+            Amarzenar();
+            break;
+        
+        case 3:
+            Aprovados();
+            break;
+        
+        case 4:
+            porcemFouM();
+            break;
+
+        case 5:
+            Medias();
+            break;
+            
+        case 6:
+            printf("Obrigado(a)!\n");
+            break;
+        
+        default:
+        	printf("Opcao invalida!\nTente novamente:\n");
+            break;
+        }
+    }
+	while (opt < 6 && opt > 0);
+    
+    return 0;
+}
 
 /*__________________________________________________________________________________*/
 
