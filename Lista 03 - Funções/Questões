@@ -189,6 +189,27 @@ em que pi = 3.1414592 valor do raio r deve ser passado por parâmetro.
 */
 
 #include<stdio.h>
+#include <math.h>
+#define pi 3.1414592
+
+float volEsf(float r){
+ return (4 * pi * pow(r, 3)) / 3;
+}
+
+int main(){
+	
+    float r, v;
+
+    printf("Digite o raio da esfera: ");
+    scanf("%f", &r);
+
+    v = volEsf(r);
+    
+    printf("\n\n");
+    printf("O volume da esfera eh %.1f\n", v);
+	
+	return 0;
+}
 
 /*_______________________________________________________________________________________*/
 
