@@ -156,6 +156,29 @@ em que pi = 3.1414592
 */
 
 #include<stdio.h>
+#include <math.h>
+#define pi 3.1414592
+
+float vol(float h, float r){
+	return pi * pow(r, 2) * h;
+}
+
+int main(){
+	
+	float h, r, volume;
+
+    printf("Digite a altura do cilindro: ");
+    scanf("%f", &h);
+    printf("\nInforme o raio do cilindro: ");
+    scanf("%f", &r);
+
+    volume = vol(h, r);
+    
+    printf("\n\n");
+    printf("O volume do cilindro eh %.1f", volume);
+	
+	return 0;
+}
 
 /*_______________________________________________________________________________________*/
 
