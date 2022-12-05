@@ -495,8 +495,7 @@ typedef struct veiculos{
 	int ano, num_chassi;
 }veiculos;
 
-int main(){
-	int main(){
+void armazenar(){
 	
 	int i;
 	veiculos car[quant];
@@ -524,6 +523,11 @@ int main(){
 	gets(car[i].placa);
 
 	}
+}
+	
+	void quest_a(){
+	
+	int i;
 	
 	printf("\nPropietarios cujos carros são do ano de 2010 ou posterior e que sejam movidos a diesel\n");
 	for(i = 0; i < quant; i++){
@@ -534,6 +538,11 @@ int main(){
 		}
 	printf("\n\n");	
 	}
+}
+	
+	void quest_b(){
+		
+	int i, soma = 0;
 	
 	printf("\nPlacas que comecem com a letra J e terminem com 0, 2, 4 ou 7\n ");
 	for(i = 0; i < quant; i++){
@@ -544,6 +553,21 @@ int main(){
 		}
 	}
 	printf("\n\n");
+}
+/*c. Elabore uma função que liste o modelo e a cor dos veículos cujas placas
+possuem como segunda letra uma vogal e cuja soma dos valores
+numéricos fornece um número par.*/
+	void quest_c(){
+		
+	int i;,
+	
+	printff("Modelo do veiculo----> %s", car.modelo);
+	printf("\nPlaca do veiculo----> %s ", car.placa);
+	
+	for(i = 0; i < quant; i++){
+		
+	}
+	}
 	
 return 0;		
 }
