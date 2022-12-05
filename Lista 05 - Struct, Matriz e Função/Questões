@@ -282,27 +282,27 @@ void amarzenar(){
 	
 	printf("\n\n------INSIRA DADOS DO RESTAURANTE------");
 	printf("\nNome do restaurante: ");
-	scanf("%c", &rest[l][c].nome);
+	scanf("%s", &rest[l][c].nome);
 	fflush(stdin);
 	printf("Preco medio: ");
 	scanf("%f", &rest[l][c].preco_medio);
 	fflush(stdin);
 	printf("Tipo de comida: ");
-	scanf("%c", &rest[l][c].type_food);
+	scanf("%s", &rest[l][c].type_food);
 	fflush(stdin);
 	     printf("\n\n");
 	printf("------ENDERECO------\n");
 	printf("CEP: ");
-	scanf("%c", &rest[l][c].endp.cep);
+	scanf("%s", &rest[l][c].endp.cep);
 	fflush(stdin);
 	printf("Endereco, Casa e Bairro: ");
-	scanf("%c", &rest[l][c].endp.endereco);
+	scanf("%s", &rest[l][c].endp.endereco);
 	fflush(stdin);
 	printf("Cidade: ");
-	scanf("%c", &rest[l][c].endp.cidade);
+	scanf("%s", &rest[l][c].endp.cidade);
 	fflush(stdin);
 	printf("Estado |Singlas, por exemplo: SP = São Paulo|: ");
-	scanf("%c", &rest[l][c].endp.cep);
+	scanf("%s", &rest[l][c].endp.cep);
 	fflush(stdin);
 }
 
@@ -316,10 +316,10 @@ void mostrar(){
 	for(m1 = 0; m1 < 3; m1++){
 		for(m2 = 0; m2 < 3; m2++){
 			
-			printf("Nome do Restaurante:  %c",rest[m1][m2].nome);
-			printf("Endereco:  %c",rest[m1][m2].endp);
+			printf("Nome do Restaurante:  %s",rest[m1][m2].nome);
+			printf("Endereco:  %s",rest[m1][m2].endp);
 			printf("Preco medio:  %.1f",rest[m1][m2].preco_medio);
-			printf("Tipo de comida:  %c",rest[m1][m2].type_food);
+			printf("Tipo de comida:  %s",rest[m1][m2].type_food);
 			
 		}
 	}
@@ -393,7 +393,7 @@ void amarzenar(){
 	
 	printf("\n\n------INSIRA DADOS DA DIETA------");
 	printf("\nInforme o nome da comida: ");
-	scanf("%c", &diet[l][c].nome_comida);
+	scanf("%s", &diet[l][c].nome_comida);
 	fflush(stdin);
 	printf("\nPeso de uma porcao: ");
 	scanf("%f", &diet[l][c].peso_porcao);
@@ -414,7 +414,7 @@ void mostrar(){
 	for(m1 = 0; m1 < 3; m1++){
 		for(m2 = 0; m2 < 3; m2++){
 			
-			printf("Comida:  %c",diet[m1][m2].nome_comida);
+			printf("Comida:  %s",diet[m1][m2].nome_comida);
 			printf("Peso por porcao:  %.1f",diet[m1][m2].peso_porcao);
 			printf("Numero de calorias:  %.1f",diet[m1][m2].num_calorias);
 			
@@ -487,3 +487,63 @@ possuam nenhum dígito igual a zero.
 */
 
 #include <stdio.h>
+#inlcude<string.h>
+#define quant 1 //pode mudar
+
+typedef struct veiculos{
+	char proprietario[100], combustivel[25], modelo[100], cor[50] placa[10];
+	int ano, num_chassi;
+}veiculos;
+
+int main(){
+	int main(){
+	
+	int i;
+	veiculos car[quant];
+
+	for(i = 0; i < quant; i++){
+	printf("Informe o nome do proprietario: ");    //car[i]
+	scanf("%s", &car[i].proprietario);
+	
+	printf("Informe o combustivel utilizado (alcool, diesel ou gasolina): ");
+	scanf("%s", &car[i].combustivel);
+	
+	printf("Informe o modelo do carro: ");
+    scanf("%s", &car[i].modelo);
+	
+	printf("Informe a cor do carro: ");
+	scanf("%s", &car[i].cor);
+	
+	printf("Digite o numero do chassi: ");
+	scanf("%d", &car[i].num_chassi);
+
+	printf("Digite o ano do veiculo: ");
+	scanf("%d", &car[i].ano);
+
+	printf("Digite a placa do veiculo |tres letras e quatro numeros, por exemplo: ABC-0123|: ");
+	gets(car[i].placa);
+
+	}
+	
+	printf("\nPropietarios cujos carros são do ano de 2010 ou posterior e que sejam movidos a diesel\n");
+	for(i = 0; i < quant; i++){
+
+		if(car[i].ano >= 2010 && car[i].combustivel == "Diesel")	
+		{
+		printf("Nome do Proprietario: %s \n", car[i].proprietario);
+		}
+	printf("\n\n");	
+	}
+	
+	printf("\nPlacas que comecem com a letra J e terminem com 0, 2, 4 ou 7\n ");
+	for(i = 0; i < quant; i++){
+		if(car[i].placa[0] == 'J' || 'j' && car[i].placa[6] == '0' || '2' || '4' || '7'){
+			
+		printf("\nPlaca: %s ", car[i].placa);
+		
+		}
+	}
+	printf("\n\n");
+	
+return 0;		
+}
