@@ -374,6 +374,91 @@ peso de uma porção e o número de calorias. Escreva um programa semelhante a q
 */
 
 #include <stdio.h>
+#include<string.h>
+
+typedef struct dieta{
+	
+	char nome_comida[500];
+	float peso_porcao, num_calorias;
+}dieta;
+
+dieta diet[2][2];
+
+void amarzenar(){
+	
+	int l, c;
+	
+	for(l = 0; l < 2; l++){
+		for(c = 0; c < 2; c++){
+	
+	printf("\n\n------INSIRA DADOS DA DIETA------");
+	printf("\nInforme o nome da comida: ");
+	scanf("%c", &diet[l][c].nome_comida);
+	fflush(stdin);
+	printf("\nPeso de uma porcao: ");
+	scanf("%f", &diet[l][c].peso_porcao);
+	fflush(stdin);
+	printf("\nNumero de calorias (em gramas): ");
+	scanf("%f", &diet[l][c].num_calorias);
+	fflush(stdin);
+}
+}
+
+void mostrar(){
+	
+	int m1, m2;
+	
+		printf("-----DADOS DOS RESTAURANTES----");
+		printf("\n\n");
+		
+	for(m1 = 0; m1 < 3; m1++){
+		for(m2 = 0; m2 < 3; m2++){
+			
+			printf("Comida:  %c",diet[m1][m2].nome_comida);
+			printf("Peso por porcao:  %.1f",diet[m1][m2].peso_porcao);
+			printf("Numero de calorias:  %.1f",diet[m1][m2].num_calorias);
+			
+		}
+	}
+	
+}
+
+int main(){
+
+    int l, c, option;
+
+    do{
+        printf("[1] INSERIR DADOS\n");
+        printf("[2] MOSTRAR DADOS\n");
+        printf("[3] FINALIZAR");
+        printf("\n*******************\n");
+        printf("Digite a opcao desejada: ");
+        scanf("%d", &option);
+        fflush(stdin);
+
+        switch(option){
+
+        case 1:
+            amarzenar();
+            break;
+
+        case 2:
+            mostrar();
+            break;
+        
+       case 3:
+            printf("Obrigado(a)!\n");
+            break;
+        
+        default:
+        	printf("Opcao invalida!\nTente novamente:\n");
+            break;
+        }
+        }
+       while (option < 3 && option > 3);
+    
+ return 0;
+}
 
 /*__________________________________________________________________________________*/
 
