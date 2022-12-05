@@ -207,12 +207,12 @@ int main(){
 
     do{
         printf("*********MENU*********\n");
-        printf("[1] CADASTRAR ALUNOS");
-        printf("[2] APRESETAR DADOS DOS ALUNOS");
-        printf("[3] PORCENTAGEM DE ALUNOS APROVADOS E REPROVADOS");
-        printf("[4] PORCENTAGEM DE ALUNOS DO SEXO MACULINO E FEMININO");
-        printf("[5] MEDIA DAS IDADES");
-        printf("[6] FINALIZAR");
+        printf("[1] CADASTRAR ALUNOS\n");
+        printf("[2] APRESETAR DADOS DOS ALUNOS\n");
+        printf("[3] PORCENTAGEM DE ALUNOS APROVADOS E REPROVADOS\n");
+        printf("[4] PORCENTAGEM DE ALUNOS DO SEXO MACULINO E FEMININO\n");
+        printf("[5] MEDIA DAS IDADES\n");
+        printf("[6] FINALIZAR\n");
         printf("\n*******************\n");
         printf("\nDigite a opcao desejada: ")
         scanf("%d", &option);
@@ -263,9 +263,10 @@ matriz e outra para listar todos os dados.
 */
 
 #include<stdio.h>
+#include<string.h>
 
 typedef struct enderecoP{
-	char cep[25], casa[10], estado[2], cidade[100], endereco[500]; bairro[50];
+	char cep[25], estado[2], cidade[100], endereco[500];
 }enderecoP;
 typedef struct restaurantes{
 	char nome[500], type_food[200];
@@ -273,7 +274,96 @@ typedef struct restaurantes{
 	enderecoP endp;
 }restaurantes;
 
-restaurantes rest [2][2];
+restaurantes rest [3][3];
+
+void amarzenar(){
+	
+	int l, c;
+	
+	printf("\n\n------INSIRA DADOS DO RESTAURANTE------");
+	printf("\nNome do restaurante: ");
+	scanf("%c", &rest[l][c].nome);
+	fflush(stdin);
+	printf("Preco medio: ");
+	scanf("%f", &rest[l][c].preco_medio);
+	fflush(stdin);
+	printf("Tipo de comida: ");
+	scanf("%c", &rest[l][c].type_food);
+	fflush(stdin);
+	     printf("\n\n");
+	printf("------ENDERECO------\n");
+	printf("CEP: ");
+	scanf("%c", &rest[l][c].endp.cep);
+	fflush(stdin);
+	printf("Endereco, Casa e Bairro: ");
+	scanf("%c", &rest[l][c].endp.endereco);
+	fflush(stdin);
+	printf("Cidade: ");
+	scanf("%c", &rest[l][c].endp.cidade);
+	fflush(stdin);
+	printf("Estado |Singlas, por exemplo: SP = São Paulo|: ");
+	scanf("%c", &rest[l][c].endp.cep);
+	fflush(stdin);
+}
+
+void mostrar(){
+	
+	int m1, m2;
+	
+		printf("-----DADOS DOS RESTAURANTES----");
+		printf("\n\n");
+		
+	for(m1 = 0; m1 < 3; m1++){
+		for(m2 = 0; m2 < 3; m2++){
+			
+			printf("Nome do Restaurante:  %c",rest[m1][m2].nome);
+			printf("Endereco:  %c",rest[m1][m2].endp);
+			printf("Preco medio:  %.1f",rest[m1][m2].preco_medio);
+			printf("Tipo de comida:  %c",rest[m1][m2].type_food);
+			
+		}
+	}
+	
+}
+
+int main(){
+
+    int l, c, option;
+
+    do{
+        printf("[1] INSERIR DADOS\n");
+        printf("[2] MOSTRAR DADOS\n");
+        printf("[3] FINALIZAR");
+        printf("\n*******************\n");
+        printf("Digite a opcao desejada: ");
+        scanf("%d", &option);
+        fflush(stdin);
+
+        switch(option){
+
+        case 1:
+            amarzenar(l, c);
+
+            break;
+
+        case 2:
+            mostrar();
+
+            break;
+        
+       case 3:
+            printf("Obrigado(a)!\n");
+            break;
+        
+        default:
+        	printf("Opcao invalida!\nTente novamente:\n");
+            break;
+        }
+        }
+       while (option < 3 && option > 3);
+    
+ return 0;
+    }
 
 /*__________________________________________________________________________________*/
 
